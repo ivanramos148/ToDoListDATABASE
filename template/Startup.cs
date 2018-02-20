@@ -4,7 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Http;
 
-namespace Project
+namespace template
 {
     public class Startup
     {
@@ -26,6 +26,7 @@ namespace Project
         {
             app.UseMvc(routes =>
             {
+                app.UseDeveloperExceptionPage();
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
