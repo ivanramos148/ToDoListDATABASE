@@ -3,6 +3,12 @@
 old="_template_"
 new="$1"
 
+if [ -e "../$new.Solution" ]
+then
+  echo this project already exists
+  exit 1
+fi
+
 cp -r . "../$new.Solution"
 cd "../$new.Solution"
 rm renamer.sh
@@ -26,7 +32,7 @@ list()
 
       newname="${file/$old/$new}"
       oldname="$file"
-      if [ "$oldname" != "$newname" ] && [ -e $file ]
+      if [ "$oldname" != "$newname" ]
       then
         mv "$oldname" "$newname" && echo "$oldname > $newname"
       fi
