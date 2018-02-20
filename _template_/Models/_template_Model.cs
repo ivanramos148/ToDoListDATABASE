@@ -1,8 +1,8 @@
 using System;
 
-namespace template.Models
+namespace _template_.Models
 {
-  public class templateModel
+  public class _template_Model
   {
     public static string GetString()
     {

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-old="template"
+old="_template_"
 new="$1"
 
 cp -r . "../$new.Solution"

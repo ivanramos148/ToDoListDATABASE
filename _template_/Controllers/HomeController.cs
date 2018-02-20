@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
-using template.Models;
+using _template_.Models;
 
-namespace template.Controllers
+namespace _template_.Controllers
 {
   public class HomeController : Controller
   {
@@ -9,7 +9,7 @@ namespace template.Controllers
     [HttpGet("/")]
     public ActionResult Index()
     {
-      return View("Index", templateModel.GetString());
+      return View("Index", _template_Model.GetString());
     }
   }
 }
