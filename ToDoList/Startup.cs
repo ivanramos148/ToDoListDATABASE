@@ -4,8 +4,12 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Http;
 
-namespace _template_
+namespace ToDoList
 {
+    public static class DBConfiguration
+    {
+      public static string ConnectionString = "server=localhost;user id=root;password=root;port=8889;database=todo;";
+    }
     public class Startup
     {
         public Startup(IHostingEnvironment env)
